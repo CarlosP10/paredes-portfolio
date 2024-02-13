@@ -1,0 +1,371 @@
+.kura_tm_hero .services ul li .image{
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -111;
+}
+.kura_tm_modalbox{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 100vh;
+	z-index: 15;
+	background-color: rgba(0,0,0,.8);
+	opacity: 0;
+	visibility: hidden;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.kura_tm_modalbox.opened{
+	opacity: 1;
+	visibility: visible;
+}
+.kura_tm_modalbox .box_inner{
+	position: absolute;
+	top: 70px;
+	bottom: 70px;
+	width: 968px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #fff;
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	margin-top: -20px;
+	transition-delay: .3s;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.kura_tm_modalbox.opened .box_inner{
+	opacity: 1;
+	visibility: visible;
+	margin-top: 0px;
+}
+.kura_tm_modalbox .close{
+	position: fixed;
+	left: 100%;
+	top: 0px;
+	margin-left: 20px;
+	z-index: 111111;
+}
+.kura_tm_modalbox .close a{
+	text-decoration: none;
+	color: #fff;
+}
+.kura_tm_modalbox .close .svg{
+	width: 50px;
+	height: 50px;
+}
+.kura_tm_modalbox .description_wrap{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	padding: 50px;
+	overflow-y: scroll;
+}
+.kura_tm_hero .popup_informations{
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -11;
+	display: none;
+}
+.kura_tm_modalbox .popup_informations{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kura_tm_modalbox .popup_informations .image{
+	position: relative;
+	margin-bottom: 37px;
+}
+.kura_tm_modalbox .popup_informations .image img{
+	position: relative;
+	opacity: 0;
+	min-width: 100%;
+}
+.kura_tm_modalbox .popup_informations .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 15px;
+}
+.kura_tm_modalbox .popup_informations .title{
+	width: 100%;
+	float: left;
+	margin-bottom: 22px;
+}
+.kura_tm_modalbox .title h3{
+	font-size: 22px;
+	font-weight: 700;
+}
+.kura_tm_modalbox .description{
+	width: 100%;
+	float: left;
+}
+.kura_tm_modalbox .description p{
+	margin-bottom: 15px;
+}
+.kura_tm_modalbox .description p:last-child{
+	margin-bottom: 0px;
+}
+.kura_tm_modalbox .description_wrap::-webkit-scrollbar{
+  width: 11px;
+}
+.kura_tm_modalbox .description_wrap{
+  scrollbar-width: thin;
+  scrollbar-color: #999 #fff;
+}
+.kura_tm_modalbox .description_wrap:-webkit-scrollbar-track{
+  background: #fff;
+}
+.kura_tm_modalbox .description_wrap::-webkit-scrollbar-thumb{
+  background-color: #999;
+  border-radius: 6px;
+  border: 3px solid #fff;
+}
+.kura_tm_portfolio .hidden_content{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -11;
+}
+.kura_tm_modalbox .popup_details{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kura_tm_modalbox .popup_details .top_image{
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 37px;
+}
+.kura_tm_modalbox .popup_details .top_image img{
+	position: relative;
+	min-width: 100%;
+	opacity: 0;
+}
+.kura_tm_modalbox .popup_details .top_image .main{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+}
+.kura_tm_modalbox .portfolio_main_title{
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+}
+.kura_tm_modalbox .portfolio_main_title h3{
+	font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.kura_tm_modalbox .main_details{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	margin-bottom: 60px;
+}
+.kura_tm_modalbox .main_details .textbox{
+	width: 70%;
+	padding-right: 40px;
+}
+.kura_tm_modalbox .main_details .textbox p{
+	margin-bottom: 15px;
+}
+.kura_tm_modalbox .main_details .textbox p:last-child{
+	margin-bottom: 0px;
+}
+.tokyo_tm_modalbox .main_details .detailbox{
+	width: 30%;
+	padding-left: 40px;
+}
+.kura_tm_modalbox .main_details .detailbox > ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.kura_tm_modalbox .main_details .detailbox > ul > li{
+	margin: 0px 0px 8px 0px;
+	width: 100%;
+	float: left;
+}
+.kura_tm_modalbox .main_details .detailbox > ul > li:last-child{
+	margin-bottom: 0px;
+}
+.kura_tm_modalbox .main_details .detailbox .first{
+    font-weight: 700;
+	display: block;
+	color: #000;
+	margin-bottom: 3px;
+}
+.kura_tm_modalbox .main_details .detailbox span a{
+	text-decoration: none;
+	color: #767676;
+}
+.kura_tm_modalbox .main_details .detailbox .share{
+	margin: 0px;
+	list-style-type: none;
+	position: relative;
+	top: 7px;
+}
+.kura_tm_modalbox .main_details .detailbox .share li{
+	margin: 0px 13px 0px 0px;
+	display: inline-block;
+}
+.kura_tm_modalbox .main_details .detailbox .share li:last-child{
+	margin-right: 0px;
+}
+.kura_tm_modalbox .main_details .detailbox .share li a{
+	text-decoration: none;
+	color: #000;
+}
+.kura_tm_modalbox .additional_images{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kura_tm_modalbox .additional_images ul{
+	margin: 0px 0px 0px -30px;
+	list-style-type: none;
+}
+.kura_tm_modalbox .additional_images ul li{
+	margin: 0px 0px 30px 0px;
+	float: left;
+	width: 50%;
+	padding-left: 30px;
+}
+.kura_tm_modalbox .additional_images ul li:nth-child(3n-2){
+	width: 100%;
+}
+.kura_tm_modalbox .additional_images ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.kura_tm_modalbox .additional_images ul li .my_image{
+	position: relative;
+}
+.kura_tm_modalbox .additional_images ul li .my_image img{
+	opacity: 0;
+	min-width: 100%;
+}
+.kura_tm_modalbox .additional_images ul li .my_image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 10px;
+}
+.kura_tm_news .news_hidden_details{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -11;
+}
+.kura_tm_modalbox .news_popup_informations{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.kura_tm_modalbox .news_popup_informations .image{
+	position: relative;
+	margin-bottom: 37px;
+}
+.kura_tm_modalbox .news_popup_informations .image img{
+	position: relative;
+	opacity: 0;
+	min-width: 100%;
+}
+.kura_tm_modalbox .news_popup_informations .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 10px;
+}
+.kura_tm_modalbox .news_popup_informations .details{
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+}
+.kura_tm_modalbox .news_popup_informations .details span{
+	display: inline-block;
+	margin-bottom: 7px;
+}
+.kura_tm_modalbox .news_popup_informations .details h3{
+	font-size: 22px;
+	font-weight: 700;
+}
+.kura_tm_modalbox .news_popup_informations .text{
+	width: 100%;
+	float: left;
+}
+.kura_tm_modalbox .news_popup_informations .text p{
+	margin-bottom: 15px;
+}
+.kura_tm_modalbox .news_popup_informations .text p:last-child{
+	margin-bottom: 0px;
+}
+
+/*Responsive*/
+
+@media (max-width: 1400px) {
+	.kura_tm_modalbox .box_inner{width: 700px;}
+	.kura_tm_modalbox .main_details{flex-direction: column;}
+	.kura_tm_modalbox .main_details .textbox{width: 100%;padding-right: 0px;margin-bottom: 30px;}
+	.kura_tm_modalbox .main_details .detailbox{width: 100%;}
+	.kura_tm_modalbox .additional_images ul{margin: 0px;}
+	.kura_tm_modalbox .additional_images ul li{width: 100%;padding-left: 0px;}
+}
+@media (max-width: 1040px) {
+	.kura_tm_modalbox .box_inner{width: 500px;}
+	.kura_tm_modalbox .close .svg{width: 40px;height: 40px;}
+}
+@media (max-width: 768px) {
+	.kura_tm_modalbox .box_inner{width: 300px;}
+	.kura_tm_modalbox .close .svg{width: 20px;height: 20px;}
+	.kura_tm_modalbox .close{margin-left: -20px;top: -32px;}
+	.kura_tm_modalbox .description_wrap{padding: 30px;}
+	.kura_tm_modalbox .title h3{font-size: 20px;}
+	.kura_tm_modalbox .portfolio_main_title h3{font-size: 20px;}
+	.kura_tm_modalbox .news_popup_informations .details h3{font-size: 20px;}
+}
