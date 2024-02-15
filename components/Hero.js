@@ -8,22 +8,27 @@ const Hero = () => {
 
   const { setServiceModal, modalToggle } = useContext(context);
 
-  const handleDownloadCV = () => {
-    // URL de tu CV
+  const handleDownloadCV = async () => {
     const cvUrl = 'assets/cv/CV_CParedes_en_2024.pdf';
 
-    // Crear un enlace temporal
-    const link = document.createElement('a');
-    link.href = cvUrl;
-    link.setAttribute('download', 'mi_cv.pdf');
+    try {
+        const response = await fetch(cvUrl);
+        const blob = await response.blob();
+        const blobUrl = URL.createObjectURL(blob);
 
-    // Simular el clic en el enlace para iniciar la descarga
-    document.body.appendChild(link);
-    link.click();
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.setAttribute('download', 'mi_cv.pdf');
 
-    // Eliminar el enlace temporal
-    document.body.removeChild(link);
-  };
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        URL.revokeObjectURL(blobUrl);
+    } catch (error) {
+        console.error('Error downloading CV:', error);
+    }
+};
 
   return (
     <div
