@@ -10,7 +10,7 @@ const Hero = () => {
 
   const handleDownloadCV = () => {
     // URL de tu CV
-    const cvUrl = '/cv/CV_CParedes_en_2024.pdf';
+    const cvUrl = 'assets/cv/CV_CParedes_en_2024.pdf';
 
     // Crear un enlace temporal
     const link = document.createElement('a');
