@@ -16,6 +16,26 @@ const Skills = () => {
     });
   });
 
+  const skillsList = [
+    'Swift programming language',
+    'Objective-C programming language',
+    'UIKit framework',
+    'Auto Layout',
+    'Networking (RESTful APIs, JSON, XML)',
+    'Multithreading and concurrency',
+    'Git version control',
+    'Unit testing and UI testing'
+  ];
+  const additionalSkillsList = [
+    'App Store deployment and distribution',
+    'Debugging and troubleshooting',
+    'Design patterns (MVC, MVVM, etc.)',
+    'Third-party API integration (RxSwift, RxCocoa)',
+    'Custom UI development',
+    'Agile development methodologies',
+    'Collaboration and communication skills'
+  ];
+
   return (
     <div
       className="kura_tm_section w-full h-auto clear-both float-left"
@@ -24,7 +44,7 @@ const Skills = () => {
       <div className="kura_tm_skills w-full h-auto clear-both float-left relative px-0 pt-[140px] pb-[150px]">
         <div className="container">
           <div className="skills_inner w-full h-auto clear-both float-left relative z-[3]">
-            <div className="left w-[60%] pr-[200px]">
+            <div className="left w-full pr-[200px]">
               <div className="kura_tm_main_title w-full h-auto clear-both float-left">
                 <span className="inline-block mb-[10px] text-secondary-color font-poppins font-medium">
                   Skills
@@ -34,71 +54,27 @@ const Skills = () => {
                 </h3>
               </div>
               <div
-                className="text w-full float-left mt-[40px] mb-[44px] wow fadeInUp"
-                data-wow-duration=".7s"
-              >
-                <p className="text-[#bbb]">
-                  For more than 20 years our experts have been accomplishing
-                  enough with modern Web Development, new generation web and app
-                  programming language.
-                </p>
-              </div>
-              <div
-                className="dodo_progress wow fadeInUp"
+                className="dodo_progress mt-[40px] mb-[44px] wow fadeInUp left w-[50%] pr-[70px] "
                 data-wow-duration=".7s"
                 data-wow-delay=".2s"
               >
-                <div className="progress_inner" data-value={95}>
-                  <span>
-                    <span className="label">HTML &amp; CSS</span>
-                    <span className="number">95%</span>
-                  </span>
-                  <div className="background">
-                    <div className="bar">
-                      <div className="bar_in" />
-                    </div>
-                  </div>
-                </div>
-                <div className="progress_inner" data-value={80}>
-                  <span>
-                    <span className="label">JavaScript</span>
-                    <span className="number">80%</span>
-                  </span>
-                  <div className="background">
-                    <div className="bar">
-                      <div className="bar_in" />
-                    </div>
-                  </div>
-                </div>
-                <div className="progress_inner" data-value={90}>
-                  <span>
-                    <span className="label">WordPress</span>
-                    <span className="number">90%</span>
-                  </span>
-                  <div className="background">
-                    <div className="bar">
-                      <div className="bar_in" />
-                    </div>
-                  </div>
-                </div>
+                <ul className="skills">
+                  {skillsList.map((item, index) => (
+                    <li className="label uppercase" key={index}><span>•</span> {item}</li>
+                  ))}
+                </ul>
               </div>
-            </div>
-            <div
-              className="right w-[40%] absolute bg-cover right-0 top-0 bottom-[-220px] overflow-hidden"
-              data-background-style="image"
-            >
-              {" "}
-              {/* Background Styles: "video" and "image" // Also you can use any youtube, vimeo, and local videos */}
               <div
-                className="my_video absolute inset-0 jarallax"
-                data-speed={0}
-                data-jarallax-video="https://www.youtube.com/watch?v=7e90gBu4pas"
-              />
-              <div
-                className="my_image absolute inset-0 bg-no-repeat bg-cover bg-center jarallax"
-                data-speed={0}
-                data-img-url="assets/img/portfolio/2.jpg"
-              />
+                className="dodo_progress mt-[40px] mb-[44px] wow fadeInUp right w-[50%] pr-[70px] "
+                data-wow-duration=".7s"
+                data-wow-delay=".2s"
+              >
+                <ul className="skills">
+                  {additionalSkillsList.map((item, index) => (
+                    <li className="label uppercase" key={index}><span>•</span> {item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>

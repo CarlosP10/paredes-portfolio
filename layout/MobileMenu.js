@@ -8,7 +8,7 @@ const MobileMenu = ({ dark }) => {
               <img
                 className="max-w-[80px] max-h-[50px]"
                 src={
-                  dark ? "assets/img/logo/logo.png" : "assets/img/logo/dark.png"
+                  dark ? "assets/img/logo/icon.png" : "assets/img/logo/icon2.png"
                 }
                 alt=""
               />
@@ -56,22 +56,6 @@ const MobileMenu = ({ dark }) => {
                 href="#timeline"
               >
                 Timeline
-              </a>
-            </li>
-            <li className="float-left w-full">
-              <a
-                className="text-black inline-block p-0 font-poppins font-medium"
-                href="#price"
-              >
-                Price
-              </a>
-            </li>
-            <li className="float-left w-full">
-              <a
-                className="text-black inline-block p-0 font-poppins font-medium"
-                href="#news"
-              >
-                News
               </a>
             </li>
             <li className="float-left w-full">

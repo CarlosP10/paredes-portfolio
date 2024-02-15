@@ -10,6 +10,35 @@ const Portfolio = () => {
     kuraUtilit.imgToSVG();
   }, []);
 
+  const contentSections = [
+    {
+      imageSrc: 'assets/img/thumbs/42-29.jpg',
+      imgDataUrl: 'assets/img/portfolio/avocados.png',
+      appName: 'Avocados',
+      appDescription: 'The Avocados app is an iOS project developed in SwiftUI. I created an eye-catching user interface for an avocado recipes app, implementing nested scroll views, a custom tab view with icons, and light/dark mode support. I also optimized the app for iPad.',
+      frameworks: ['SwiftUI']
+    }, {
+      imageSrc: 'assets/img/thumbs/42-29.jpg',
+      imgDataUrl: 'assets/img/portfolio/pinch.png',
+      appName: 'Pinch',
+      appDescription: 'The Pinch & Zoom project delves into the development of advanced Pinch and Zoom features using SwiftUI gestures. Explore various gestures like long-press, double-tap, drag, and magnification, along with the integration of blur effects and SF Symbols for iconography. ',
+      frameworks: ['SwiftUI']
+    }, {
+      imageSrc: 'assets/img/thumbs/42-29.jpg',
+      imgDataUrl: 'assets/img/portfolio/nearMe.png',
+      appName: 'NearMe',
+      appDescription: ' NearMe utilizes iOS MapKit framework to enable users to discover nearby locations and obtain directions. Key features include location search, detailed map view, and integration with third-party apps for calling or navigation.',
+      frameworks: ['UIKit', 'MapKit']
+    }, {
+      imageSrc: 'assets/img/thumbs/42-29.jpg',
+      imgDataUrl: 'assets/img/portfolio/budgetApp.png',
+      appName: 'StoreApp',
+      appDescription: 'StoreApp is a small application developed as part of my portfolio, combining SwiftUI with a networking layer and implementing clean code practices for enhanced code readability. The app includes operations to consume a CRUD (Create, Read, Update, Delete) API, providing users with functionality to interact with a public API seamlessly.',
+      frameworks: ['UIKit', 'SwiftUI', 'CoreData']
+    },
+    // Añade más objetos para cada sección adicional
+  ];
+
   const { setPortfolioModal, modalToggle } = useContext(context);
 
   return (
@@ -25,238 +54,85 @@ const Portfolio = () => {
             </span>
             <h3 className="font-extrabold uppercase">Selected Works</h3>
           </div>
-          <div
-            className="portfolio_list w-full h-auto clear-both float-left pt-[92px] gallery_zoom wow fadeInUp"
-            data-wow-duration=".7s"
-          >
-            <Swiper {...portfolioSlider} className="swiper-container">
-              <div className="swiper-wrapper">
-                <SwiperSlide className="swiper-slide">
-                  <div className="list_inner w-full h-auto clear-both float-left">
-                    <div className="image relative">
-                      <img
-                        className="relative min-w-full opacity-0"
-                        src="assets/img/portfolio/410-460.jpg"
-                        alt=""
-                      />
-                      <div
-                        className="main absolute inset-0 bg-no-repeat bg-cover bg-center rounded-[10px]"
-                        data-img-url="assets/img/portfolio/1.jpg"
-                      />
-                    </div>
-                    <div className="overlay absolute inset-[10px] bg-white rounded-[10px] z-[1] transition-all duration-300" />
-                    <img
-                      className="svg absolute top-[40px] right-[39px] w-[50px] h-[50px] z-[2] rotate-[-50deg] text-black transition-all duration-300"
-                      src="assets/img/svg/right-arrow.svg"
-                      alt=""
-                    />
-                    <div className="details absolute z-[2] bottom-[41px] left-[49px] transition-all duration-300">
-                      <h3 className="text-[20px] font-bold mb-[4px]">
-                        Magic Art
+          <div className="kura_tm_hero w-full min-h-[70vh] float-left clear-both ">
+            {contentSections.map((section, index) => (
+              <div>
+                {index % 2 === 0 ? (
+                  <div className="content w-full min-h-[70vh] flex items-center relative">
+                    <div className="left w-1/2 pr-[50px] relative opacity-0 invisible top-[20px] transition-all duration-[400ms]">
+                      <h3 className="job text-[35px] font-semibold leading-[1.4] uppercase mb-[25px]">
+                        {section.appName}
                       </h3>
-                      <span className="font-poppins">Vimeo</span>
+                      <div className="services w-full h-auto clear-both float-left mb-[35px]">
+                        <p className="text-black text-sm small:text-lg inline-block py-[8px] px-0 relative transition-all duration-300">
+                          {section.appDescription}
+                        </p>
+                        <div className="kura_tm_container_wrapper">
+                          {section.frameworks.map((value) => (
+                            <div className="kura_tm_container" >
+                              <p className="bg-secondary-color text-white font-poppins py-2 px-4 rounded-full">
+                                {value}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                    <a
-                      className="kura_tm_full_link absolute inset-0 z-[5] popup-vimeo"
-                      href="https://vimeo.com/337292310"
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                  <div className="list_inner w-full h-auto clear-both float-left">
-                    <div className="image relative">
-                      <img
-                        className="relative min-w-full opacity-0"
-                        src="assets/img/portfolio/410-460.jpg"
-                        alt=""
-                      />
-                      <div
-                        className="main absolute inset-0 bg-no-repeat bg-cover bg-center rounded-[10px]"
-                        data-img-url="assets/img/portfolio/2.jpg"
-                      />
-                    </div>
-                    <div className="overlay absolute inset-[10px] bg-white rounded-[10px] z-[1] transition-all duration-300" />
-                    <img
-                      className="svg absolute top-[40px] right-[39px] w-[50px] h-[50px] z-[2] rotate-[-50deg] text-black transition-all duration-300"
-                      src="assets/img/svg/right-arrow.svg"
-                      alt=""
-                    />
-                    <div className="details absolute z-[2] bottom-[41px] left-[49px] transition-all duration-300">
-                      <h3 className="text-[20px] font-bold mb-[4px]">
-                        Bona Green
-                      </h3>
-                      <span className="font-poppins">Youtube</span>
-                    </div>
-                    <a
-                      className="kura_tm_full_link absolute inset-0 z-[5] popup-youtube"
-                      href="https://www.youtube.com/watch?v=7e90gBu4pas"
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                  <div className="list_inner w-full h-auto clear-both float-left">
-                    <div className="image relative">
-                      <img
-                        className="relative min-w-full opacity-0"
-                        src="assets/img/portfolio/410-460.jpg"
-                        alt=""
-                      />
-                      <div
-                        className="main absolute inset-0 bg-no-repeat bg-cover bg-center rounded-[10px]"
-                        data-img-url="assets/img/portfolio/3.jpg"
-                      />
-                    </div>
-                    <div className="overlay absolute inset-[10px] bg-white rounded-[10px] z-[1] transition-all duration-300" />
-                    <img
-                      className="svg absolute top-[40px] right-[39px] w-[50px] h-[50px] z-[2] rotate-[-50deg] text-black transition-all duration-300"
-                      src="assets/img/svg/right-arrow.svg"
-                      alt=""
-                    />
-                    <div className="details absolute z-[2] bottom-[41px] left-[49px] transition-all duration-300">
-                      <h3 className="text-[20px] font-bold mb-[4px]">
-                        Leo Dandora
-                      </h3>
-                      <span className="font-poppins">Soundcloud</span>
-                    </div>
-                    <a
-                      className="kura_tm_full_link absolute inset-0 z-[5] soundcloude_link mfp-iframe audio"
-                      href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471954807&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                  <div className="list_inner w-full h-auto clear-both float-left">
-                    <div className="image relative">
-                      <img
-                        className="relative min-w-full opacity-0"
-                        src="assets/img/portfolio/410-460.jpg"
-                        alt=""
-                      />
-                      <div
-                        className="main absolute inset-0 bg-no-repeat bg-cover bg-center rounded-[10px]"
-                        data-img-url="assets/img/portfolio/4.jpg"
-                      />
-                    </div>
-                    <div className="overlay absolute inset-[10px] bg-white rounded-[10px] z-[1] transition-all duration-300" />
-                    <img
-                      className="svg absolute top-[40px] right-[39px] w-[50px] h-[50px] z-[2] rotate-[-50deg] text-black transition-all duration-300"
-                      src="assets/img/svg/right-arrow.svg"
-                      alt=""
-                    />
-                    <div className="details absolute z-[2] bottom-[41px] left-[49px] transition-all duration-300">
-                      <h3 className="text-[20px] font-bold mb-[4px]">
-                        Folio Grasia
-                      </h3>
-                      <span className="font-poppins">Detail</span>
-                    </div>
-                    <a
-                      className="kura_tm_full_link absolute inset-0 z-[5] portfolio_popup"
-                      href="#"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        modalToggle(true);
-                        setPortfolioModal("item");
-                      }}
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                  <div className="list_inner w-full h-auto clear-both float-left">
-                    <div className="image relative">
-                      <img
-                        className="relative min-w-full opacity-0"
-                        src="assets/img/portfolio/410-460.jpg"
-                        alt=""
-                      />
-                      <div
-                        className="main absolute inset-0 bg-no-repeat bg-cover bg-center rounded-[10px]"
-                        data-img-url="assets/img/portfolio/5.jpg"
-                      />
-                    </div>
-                    <div className="overlay absolute inset-[10px] bg-white rounded-[10px] z-[1] transition-all duration-300" />
-                    <img
-                      className="svg absolute top-[40px] right-[39px] w-[50px] h-[50px] z-[2] rotate-[-50deg] text-black transition-all duration-300"
-                      src="assets/img/svg/right-arrow.svg"
-                      alt=""
-                    />
-                    <div className="details absolute z-[2] bottom-[41px] left-[49px] transition-all duration-300">
-                      <h3 className="text-[20px] font-bold mb-[4px]">
-                        Viva Mercury
-                      </h3>
-                      <span className="font-poppins">Image</span>
-                    </div>
-                    <a
-                      className="kura_tm_full_link absolute inset-0 z-[5] zoom"
-                      href="assets/img/portfolio/5.jpg"
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                  <div className="list_inner w-full h-auto clear-both float-left">
-                    <div className="image relative">
-                      <img
-                        className="relative min-w-full opacity-0"
-                        src="assets/img/portfolio/410-460.jpg"
-                        alt=""
-                      />
-                      <div
-                        className="main absolute inset-0 bg-no-repeat bg-cover bg-center rounded-[10px]"
-                        data-img-url="assets/img/portfolio/6.jpg"
-                      />
-                    </div>
-                    <div className="overlay absolute inset-[10px] bg-white rounded-[10px] z-[1] transition-all duration-300" />
-                    <img
-                      className="svg absolute top-[40px] right-[39px] w-[50px] h-[50px] z-[2] rotate-[-50deg] text-black transition-all duration-300"
-                      src="assets/img/svg/right-arrow.svg"
-                      alt=""
-                    />
-                    <div className="details absolute z-[2] bottom-[41px] left-[49px] transition-all duration-300">
-                      <h3 className="text-[20px] font-bold mb-[4px]">
-                        Santa Onera
-                      </h3>
-                      <span className="font-poppins">Image</span>
-                    </div>
-                    <a
-                      className="kura_tm_full_link absolute inset-0 z-[5] zoom"
-                      href="assets/img/portfolio/6.jpg"
-                    />
-                  </div>
-                </SwiperSlide>
-              </div>
-              <div className="kura_tm_swiper_progress fill">
-                <div className="my_pagination_in">
-                  <span className="current portfolio_cureent" />
-                  <span className="pagination_progress">
-                    <span className="all">
-                      <span />
-                    </span>
-                  </span>
-                  <span className="total" />
-                </div>
-                <div className="my_navigation">
-                  <ul>
-                    <li>
-                      <a className="my_prev" href="#">
+                    <div className="right w-1/2 text-right pl-[70px] relative opacity-0 invisible top-[20px] transition-all duration-[400ms]">
+                      <div className="image relative">
                         <img
-                          className="svg"
-                          src="assets/img/svg/right-arrow.svg"
+                          className="min-w-full relative opacity-0"
+                          src={section.imageSrc}
                           alt=""
                         />
-                      </a>
-                    </li>
-                    <li>
-                      <a className="my_next" href="#">
+                        <div
+                          className="main absolute inset-0 bg-no-repeat bg-cover bg-center transition-all duration-[400ms]"
+                          data-img-url={section.imgDataUrl}
+                        />
+                        <div className="opacity-20 shape-portfolio" />
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="content portfolio w-full min-h-[70vh] flex items-center relative">
+                    <div className="left w-1/2 text-right pr-[70px] relative opacity-0 invisible top-[20px] transition-all duration-[400ms]">
+                      <div className="image relative">
                         <img
-                          className="svg"
-                          src="assets/img/svg/right-arrow.svg"
+                          className="min-w-full relative opacity-0"
+                          src={section.imageSrc}
                           alt=""
                         />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                        <div
+                          className="main absolute inset-0 bg-no-repeat bg-cover bg-center transition-all duration-[400ms]"
+                          data-img-url={section.imgDataUrl}
+                        />
+                        <div className="opacity-20 shape-portfolio" />
+                      </div>
+                    </div>
+                    <div className="right w-1/2 pl-[50px] relative opacity-0 invisible top-[20px] transition-all duration-[400ms]">
+                      <h3 className="job text-[35px] font-semibold leading-[1.4] uppercase mb-[25px]">
+                        {section.appName}
+                      </h3>
+                      <div className="services w-full h-auto clear-both float-left mb-[35px]">
+                        <p className="text-black text-sm small:text-lg inline-block py-[8px] px-0 relative transition-all duration-300">
+                          {section.appDescription}
+                        </p>
+                        <div className="kura_tm_container_wrapper">
+                          {section.frameworks.map((value) => (
+                            <div className="kura_tm_container" >
+                              <p className="bg-secondary-color text-white font-poppins py-2 px-4 rounded-full">
+                                {value}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )
+                }
               </div>
-            </Swiper>
+            ))}
           </div>
         </div>
       </div>

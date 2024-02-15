@@ -2,54 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
     --secondary-color: #ff4522;
 }
 
-@layer components{
-    img{
+@layer components {
+    img {
         @apply inline-block;
     }
-    ul{
+
+    ul {
         @apply list-none;
     }
-    ul,li{
+
+    ul,
+    li {
         @apply p-0 m-0;
     }
-    a{
+
+    a {
         @apply no-underline;
     }
-    html{
+
+    html {
         @apply overflow-x-hidden p-0 m-0;
     }
-    body{
+
+    body {
         @apply break-words font-mulish text-[16px] leading-[28px] tracking-[0.2px] font-normal bg-white text-[#767676];
     }
-    svg{
+
+    svg {
         @apply fill-current w-[15px] h-[15px];
     }
-    img.svg{
+
+    img.svg {
         @apply w-[15px] h-[15px];
     }
-    h1,h2,h3,h4,h5,h6{
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         @apply font-medium leading-[1.2] font-poppins text-black;
     }
-    h1{
+
+    h1 {
         @apply text-[45px];
     }
-    h2{
+
+    h2 {
         @apply text-[36px];
     }
-    h3{
+
+    h3 {
         @apply text-[30px];
     }
-    h4{
+
+    h4 {
         @apply text-[26px];
     }
-    h5{
+
+    h5 {
         @apply text-[20px];
     }
-    h6{
+
+    h6 {
         @apply text-[16px];
     }
 
@@ -57,145 +77,191 @@
 
     /*Large Screens*/
 
-    .container{
+    .container {
         @apply large:max-w-[1170px]
     }
-    .kura_tm_topbar .topbar_inner{
+
+    .kura_tm_topbar .topbar_inner {
         @apply large:py-[22px] large:pl-[50px] large:pr-[37px]
     }
-    .kura_tm_topbar.animate .topbar_inner{
+
+    .kura_tm_topbar.animate .topbar_inner {
         @apply large:py-[18px] large:pl-[50px] large:pr-[37]
     }
-    .kura_tm_hero .content .right .image{
+
+    .kura_tm_hero .content .right .image {
         @apply large:max-w-[80%]
     }
-    .kura_tm_hero .name{
+
+    .kura_tm_hero .name {
         @apply large:mb-[10px]
     }
-    .kura_tm_hero .job{
+
+    .kura_tm_hero .job {
         @apply large:text-[35px] large:mb-[20px]
     }
-    .kura_tm_hero .services{
+
+    .kura_tm_hero .services {
         @apply large:mb-[25px]
     }
-    .kura_tm_hero .services ul li a{
+
+    .kura_tm_hero .services ul li a {
         @apply large:py-[6px] large:px-0
     }
 
     /*Middle Screens*/
 
-    .mouse-cursor{
+    .mouse-cursor {
         @apply middle:hidden
     }
-    .kura_tm_topbar{
+
+    .kura_tm_topbar {
         @apply middle:hidden
     }
-    .kura_tm_mobile_menu{
+
+    .kura_tm_mobile_menu {
         @apply middle:block
     }
-    .kura_tm_hero{
+
+    .kura_tm_hero {
         @apply middle:px-0 middle:pt-[150px] middle:pb-[120px]
     }
-    .kura_tm_hero .content{
+
+    .kura_tm_hero .content {
         @apply middle:flex-col-reverse middle:justify-around middle:items-baseline
     }
-    .kura_tm_hero .content .right{
+
+    .kura_tm_hero .content .right {
         @apply middle:pl-0 middle:mb-[60px] middle:w-full
     }
-    .kura_tm_hero .content .left{
+
+    .kura_tm_hero .content .left {
         @apply middle:pr-0 middle:w-full
     }
-    .kura_tm_hero .content .right .image .shape{
+
+    .kura_tm_hero .content .right .image .shape {
         @apply middle:hidden
     }
-    .kura_tm_hero .content .right .image{
+
+    .kura_tm_hero .content .right .image {
         @apply middle:max-w-full
     }
-    body.opened .kura_tm_hero .content .right .image .main{
+
+    body.opened .kura_tm_hero .content .right .image .main {
         @apply middle:rotate-0
     }
-    .kura_tm_hero .job{
+
+    body.opened .kura_tm_hero .content .left .image .main {
+        @apply middle:rotate-0
+    }
+
+    .kura_tm_hero .job {
         @apply middle:text-[35px]
     }
-    .kura_tm_hero .down{
+
+    .kura_tm_hero .down {
         @apply middle:hidden
     }
-    .kura_tm_skills .right{
-        @apply middle:hidden
-    }
-    .kura_tm_skills .left{
+
+    .kura_tm_skills .right {
         @apply middle:w-full middle:pr-0
     }
-    .kura_tm_pricing .pricing_inner{
+
+    .kura_tm_skills .left {
+        @apply middle:w-full middle:pr-0
+    }
+
+    .kura_tm_pricing .pricing_inner {
         @apply middle:flex-col
     }
-    .kura_tm_pricing .left{
+
+    .kura_tm_pricing .left {
         @apply middle:w-full middle:pr-0
     }
-    .kura_tm_pricing .right{
+
+    .kura_tm_pricing .right {
         @apply middle:w-full middle:pl-0
     }
-    .kura_tm_contact .contact_inner{
+
+    .kura_tm_contact .contact_inner {
         @apply middle:flex-col
     }
-    .kura_tm_contact .left{
+
+    .kura_tm_contact .left {
         @apply middle:w-full middle:pr-0 middle:mb-[30px]
     }
-    .kura_tm_contact .right{
+
+    .kura_tm_contact .right {
         @apply middle:w-full middle:pl-0
     }
 
     /*Small Screens*/
 
-    .kura_tm_hero .job{
+    .kura_tm_hero .job {
         @apply small:text-[30px]
     }
-    .kura_tm_hero .short_info ul li h3{
+
+    .kura_tm_hero .short_info ul li h3 {
         @apply small:text-[35px]
     }
-    .kura_tm_hero .short_info ul li span{
+
+    .kura_tm_hero .short_info ul li span {
         @apply small:text-[13px]
     }
-    .kura_tm_portfolio .portfolio_list .svg{
+
+    .kura_tm_portfolio .portfolio_list .svg {
         @apply small:w-[35px] small:h-[35px] small:top-[33px] small:right-[32px]
     }
-    .kura_tm_portfolio .portfolio_list .details{
+
+    .kura_tm_portfolio .portfolio_list .details {
         @apply small:bottom-[31px] small:left-[39px]
     }
-    .kura_tm_portfolio .portfolio_list .details h3{
+
+    .kura_tm_portfolio .portfolio_list .details h3 {
         @apply small:text-[18px]
     }
-    .kura_tm_main_title h3{
+
+    .kura_tm_main_title h3 {
         @apply small:text-[25px]
     }
-    .kura_tm_main_title span{
+
+    .kura_tm_main_title span {
         @apply small:mb-[6px]
     }
-    .kura_tm_timeline .timeline_list ul li .list_inner{
+
+    .kura_tm_timeline .timeline_list ul li .list_inner {
         @apply small:w-full small:pr-0 small:mb-[15px]
     }
-    .kura_tm_timeline .timeline_list ul li .list_inner:last-child{
+
+    .kura_tm_timeline .timeline_list ul li .list_inner:last-child {
         @apply small:mb-0
     }
-    .kura_tm_pricing .right ul li span{
+
+    .kura_tm_pricing .right ul li span {
         @apply small:text-[16px]
     }
-    .kura_tm_news .news_list .list_inner .svg{
+
+    .kura_tm_news .news_list .list_inner .svg {
         @apply small:w-[35px] small:h-[35px] small:top-[33px] small:right-[32px]
     }
-    .kura_tm_news .news_list .details{
+
+    .kura_tm_news .news_list .details {
         @apply small:pt-0 small:pr-[30px] small:pb-[36px] small:pl-[39px]
     }
-    .kura_tm_news .news_list .details h3{
+
+    .kura_tm_news .news_list .details h3 {
         @apply small:text-[18px]
     }
-    .kura_tm_contact .short ul li .list_inner span{
+
+    .kura_tm_contact .short ul li .list_inner span {
         @apply small:text-[16px]
     }
-    .kura_tm_copyright .copyright_inner{
+
+    .kura_tm_copyright .copyright_inner {
         @apply small:flex-col
     }
-    .kura_tm_copyright .copyright_inner .text{
+
+    .kura_tm_copyright .copyright_inner .text {
         @apply small:mb-[10px]
     }
 }

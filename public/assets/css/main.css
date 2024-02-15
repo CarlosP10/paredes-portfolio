@@ -691,12 +691,18 @@ h6 {
   .kura_tm_hero {
     padding-left: 0px;
     padding-right: 0px;
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 120px;
   }
 
   .kura_tm_hero .content {
     flex-direction: column-reverse;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+
+  .kura_tm_hero .portfolio {
+    flex-direction: column;
     align-items: baseline;
     justify-content: space-around;
   }
@@ -714,6 +720,7 @@ h6 {
   }
 
   .kura_tm_hero .content .left {
+    margin-bottom: 60px;
     width: 100%;
     padding-right: 0px;
   }
@@ -731,6 +738,22 @@ h6 {
     display: none;
   }
 
+  .kura_tm_hero .content .right .image .shape-portfolio {
+    display: none;
+  }
+
+  .kura_tm_hero .content .left .image .shape-portfolio {
+    display: none;
+  }
+
+  .kura_tm_hero .content .\!right .image .shape-portfolio {
+    display: none;
+  }
+  
+  .kura_tm_hero .content .\!left .image .shape-portfolio {
+    display: none;
+  }
+
   .kura_tm_hero .content .right .image {
     max-width: 100%;
   }
@@ -740,6 +763,10 @@ h6 {
   }
 
   body.opened .kura_tm_hero .content .right .image .main {
+    --tw-rotate: 0deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+  body.opened .kura_tm_hero .content .left .image .main {
     --tw-rotate: 0deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
@@ -758,11 +785,14 @@ h6 {
   }
 
   .kura_tm_skills .right {
-    display: none;
+    width: 100%;
+    margin-top: 0px;
+    padding-right: 0px;
   }
 
   .kura_tm_skills .\!right {
-    display: none;
+    width: 100%;
+    padding-right: 0px;
   }
 
   .kura_tm_skills .left {
@@ -1308,6 +1338,14 @@ h6 {
   min-height: 100vh;
 }
 
+.min-h-\[80vh\] {
+  min-height: 80vh;
+}
+
+.min-h-\[70vh\] {
+  min-height: 70vh;
+}
+
 .min-h-full {
   min-height: 100%;
 }
@@ -1338,6 +1376,10 @@ h6 {
 
 .w-\[60\%\] {
   width: 60%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
 }
 
 .w-full {
@@ -2537,6 +2579,10 @@ h6 {
   padding-left: 200px;
 }
 
+.pl-\[70px\] {
+  padding-left: 70px;
+}
+
 .pl-\[30px\] {
   padding-left: 30px;
 }
@@ -2579,6 +2625,10 @@ h6 {
 
 .pr-\[50px\] {
   padding-right: 50px;
+}
+
+.pr-\[70px\] {
+  padding-right: 70px;
 }
 
 .pt-\[140px\] {
@@ -2687,6 +2737,10 @@ h6 {
 
 .text-\[45px\] {
   font-size: 45px;
+}
+
+.text-\[35px\] {
+  font-size: 35px;
 }
 
 .font-bold {

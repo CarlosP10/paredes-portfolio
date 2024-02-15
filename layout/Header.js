@@ -23,7 +23,7 @@ const Header = ({ dark }) => {
               <img
                 className="max-w-[70px] max-h-[70px]"
                 src={
-                  dark ? "assets/img/logo/logo.png" : "assets/img/logo/dark.png"
+                  dark ? "assets/img/logo/icon.png" : "assets/img/logo/icon2.png"
                 }
                 alt=""
               />
