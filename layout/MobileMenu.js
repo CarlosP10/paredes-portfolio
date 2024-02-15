@@ -1,4 +1,8 @@
+"use client";
+import { useState } from "react";
+
 const MobileMenu = ({ dark }) => {
+  const [toggle, setToggle] = useState(false);
   return (
     <div className="kura_tm_mobile_menu w-full h-auto fixed top-0 left-0 hidden z-[10] middle:block">
       <div className="mobile_menu_inner w-full h-auto clear-both float-left bg-white py-[15px] pr-[30px] pl-[40px]">
@@ -16,20 +20,24 @@ const MobileMenu = ({ dark }) => {
           </div>
           <div className="trigger leading-[0]">
             <div className="hamburger hamburger--slider">
-              <div className="hamburger-box">
+              <div className="hamburger-box" onClick={() => setToggle(!toggle)}>
                 <div className="hamburger-inner" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="dropdown w-full h-auto clear-both float-left bg-white hidden">
+      <div
+        className="dropdown w-full h-auto clear-both float-left bg-white hidden"
+        style={{ display: toggle ? "block" : "none" }}
+      >
         <div className="dropdown_inner w-full h-auto clear-both float-left py-[25px] px-[40px]">
           <ul className="anchor_nav">
             <li className="current float-left w-full">
               <a
                 className="text-black inline-block p-0 font-poppins font-medium"
                 href="#home"
+                onClick={() => setToggle(false)}
               >
                 Home
               </a>
@@ -38,6 +46,7 @@ const MobileMenu = ({ dark }) => {
               <a
                 className="text-black inline-block p-0 font-poppins font-medium"
                 href="#portfolio"
+                onClick={() => setToggle(false)}
               >
                 Portfolio
               </a>
@@ -46,6 +55,7 @@ const MobileMenu = ({ dark }) => {
               <a
                 className="text-black inline-block p-0 font-poppins font-medium"
                 href="#skills"
+                onClick={() => setToggle(false)}
               >
                 Skills
               </a>
@@ -54,6 +64,7 @@ const MobileMenu = ({ dark }) => {
               <a
                 className="text-black inline-block p-0 font-poppins font-medium"
                 href="#timeline"
+                onClick={() => setToggle(false)}
               >
                 Timeline
               </a>
@@ -62,6 +73,7 @@ const MobileMenu = ({ dark }) => {
               <a
                 className="text-black inline-block p-0 font-poppins font-medium"
                 href="#contact"
+                onClick={() => setToggle(false)}
               >
                 Contact
               </a>
