@@ -76,15 +76,15 @@ const Hero = () => {
                     </div>
                   </li>
                   <li className="mb-[15px] py-0 inline-block" onClick={handleDownloadCV}>
-                    <div className="list_inner flex items-center">
+                    <div className="list_inner flex items-center cv">
                       <img
-                        className="min-w-[50px] relative"
+                        className="min-w-[50px] relative clickable_element"
                         src="assets/img/svg/file-cv.svg"
                         alt=""
                         height={50}
                         width={50}
                       />
-                      <span className="font-poppins pl-[15px] inline-block leading-[1.4] relative top-[-3px] text-[14px]">
+                      <span className="font-poppins pl-[15px] inline-block leading-[1.4] clickable_element relative top-[-3px] text-[14px]">
                         Download CV
                       </span>
                     </div>

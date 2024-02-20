@@ -349,6 +349,10 @@ body.opened .kura_tm_hero .down {
   color: var(--secondary-color);
 }
 
+.kura_tm_hero .clickable_element:hover {
+  color: var(--secondary-color);
+}
+
 .kura_tm_hero .content .right .image .shape {
   position: absolute;
   top: 23px;
@@ -991,6 +995,10 @@ body.opened .kura_tm_hero .content .left .image .shape-portfolio {
 }
 
 .kura_tm_hero .down a:hover {
+  color: var(--secondary-color);
+}
+
+.kura_tm_hero .clickable_element:hover {
   color: var(--secondary-color);
 }
 
